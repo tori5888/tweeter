@@ -1,0 +1,11 @@
+.new-tweet {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: 2em 2.5%;
+}
+
+.new-tweet h2 {
+  font-weight: 600;
+  margin-bottom: 1em;
+}
