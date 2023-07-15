@@ -10,7 +10,6 @@
   margin-bottom: 1em;
 }
 
-
 .new-tweet form {
   display: flex;
   flex-direction: column;
@@ -59,12 +58,9 @@
   align-items: center;
 }
 
-
 .redText {
   color: red;
 }
-
-
 
 .tweet {
   display: flex;
@@ -91,6 +87,10 @@
 
 .tweet .user-info {
   flex-grow: 1;
+}
+
+.avatar {
+  background-color: transparent;
 }
 
 .tweet h3.user-name {
