@@ -132,3 +132,21 @@
   color: #4056a1;
   cursor: pointer;
 }
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-info .avatar {
+  font-size: 24px; /* Adjust the size as needed */
+  margin-right: 10px; /* Adjust the spacing as needed */
+}
+
+.user-info .user-name {
+  font-weight: bold;
+}
+
+.user-info .user-handle {
+  color: #888;
+}
