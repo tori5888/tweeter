@@ -6,7 +6,6 @@
 // Fake data taken from initial-tweets.json
 
 $(document).ready(function() {
-  // Fake data taken from initial-tweets.json
   const data = [
     {
       "user": {
@@ -32,43 +31,31 @@ $(document).ready(function() {
     }
   ];
 
-    // Function to render tweets
+  // Function to render tweets
   const renderTweets = function(tweets) {
     for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
-      $('#tweets-container').append($tweet);
+      $('.tweets-container').append($tweet);
     }
   };
 
-    // Function to create tweet HTML structure
+  // Function to create tweet HTML structure (should look similar to hardcoded one originally)
   const createTweetElement = function(tweet) {
-    const $tweet = `
+    const $tweet = $(`
       <article class="tweet">
         <header>
-          <div class="user-info">
-            <img class="avatar" src="${tweet.user.avatars}" alt="User Avatar">
-            <div>
-              <h3 class="user-name">${tweet.user.name}</h3>
-              <span class="user-handle">${tweet.user.handle}</span>
-            </div>
-          </div>
+          <img src="${tweet.user.avatars}" class="avatar">
+          <span class="username">${tweet.user.name}</span>
+          <span class="handle">${tweet.user.handle}</span>
         </header>
-        <div class="tweet-content">
-          <p>${tweet.content.text}</p>
-        </div>
+        <p class="content">${tweet.content.text}</p>
         <footer>
-          <span class="tweet-timestamp">${timeago.format(tweet.created_at)}</span>
-          <div class="tweet-actions">
-            <i class="fas fa-heart"></i>
-            <i class="fas fa-retweet"></i>
-            <i class="fas fa-flag"></i>
-          </div>
+          <span class="timestamp">${tweet.created_at}</span>
         </footer>
       </article>
-    `;
+    `);
     return $tweet;
   };
-
 
   renderTweets(data);
 });
