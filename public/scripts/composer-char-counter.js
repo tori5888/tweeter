@@ -1,13 +1,15 @@
 $(document).ready(function() {
-  $(document).ready(function() {
-    $('textarea[name="text"]').on('input', function() {
-      const textLength = $(this).val().length;
-      const counter = $(this).siblings('.counter');
-      const remainingChars = 140 - textLength;
+  $('.new-tweet textarea[name="text"]').on('input', function() {
+    const textLength = $(this).val().length;
+    const counter = $(this).siblings('.counter');
+    const remainingChars = 140 - textLength;
 
-      counter.text(remainingChars);
+    counter.text(remainingChars);
 
-    });
+    if (remainingChars < 0) {
+      counter.addClass('redText');
+    } else {
+      counter.removeClass('redText');
+    }
   });
-
 });
