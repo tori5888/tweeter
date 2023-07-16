@@ -57,5 +57,30 @@ $(document).ready(function() {
     return $tweet;
   };
 
+
+  $('form').submit(function(event) {
+    event.preventDefault();
+
+    const formData = $(this).serialize();
+
+    console.log(formData); // Log the form data to the console
+
+    $.ajax({
+      url: '/tweets',
+      type: 'POST',
+      data: formData,
+      success: function(response) {
+        console.log(response);
+      },
+      error: function(error) {
+        console.error(error);
+      }
+    });
+  });
+
+
+
   renderTweets(data);
 });
+
+
