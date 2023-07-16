@@ -63,8 +63,6 @@ $(document).ready(function() {
 
     const formData = $(this).serialize();
 
-    console.log(formData); // Log the form data to the console
-
     $.ajax({
       url: '/tweets',
       type: 'POST',
