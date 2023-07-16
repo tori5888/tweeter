@@ -23,12 +23,13 @@ $(document).ready(function() {
         </header>
         <p class="content">${tweet.content.text}</p>
         <footer>
-          <span class="timestamp">${tweet.created_at}</span>
+          <span class="timestamp">${timeago.format(tweet.created_at)}</span>
         </footer>
       </article>
     `);
     return $tweet;
   };
+
 
   const loadTweets = function() {
     $.ajax({
