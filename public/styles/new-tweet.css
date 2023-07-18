@@ -150,3 +150,12 @@
 .user-info .user-handle {
   color: #888;
 }
+
+
+.error-message {
+  background-color: #f44336;
+  color: white;
+  padding: 8px;
+  border-radius: 4px;
+  margin-top: 10px;
+}
