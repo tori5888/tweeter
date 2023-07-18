@@ -51,7 +51,7 @@ $(document).ready(function() {
           .append('<span class="user-handle">@yourhandle</span>')
         )
       )
-      .append($('<div class="tweet-content">').append($('<p>').text(tweetText)))
+      .append($('<div class="tweet-content">').text($('<p>').text(tweetText)))
       .append($('<footer>')
         .append($('<span class="tweet-timestamp">').text('a few seconds ago'))
         .append($('<div class="tweet-actions">').append('<i class="far fa-flag"></i><i class="fas fa-retweet"></i><i class="far fa-heart"></i>'))
