@@ -35,10 +35,17 @@ $(document).ready(function() {
       return; // Return early if validation fails
     }
 
-    // If validation passes, you can proceed with sending the form data to the server.
-    // log success message and clear the textarea.
-    console.log('Tweet sent successfully:', tweetContent);
+    // If validation passes, you can proceed with adding the new tweet to the page
+    // and clear the textarea.
+    addNewTweet(tweetContent);
     tweetTextarea.val(''); // Clear textarea
-
   });
+
+  function addNewTweet(tweetText) {
+    // Create a new tweet element
+    const newTweet = $('<div class="tweet">').text(tweetText);
+
+    // Add the new tweet to the top of the tweets list
+    $('.tweets').prepend(newTweet);
+  }
 });
