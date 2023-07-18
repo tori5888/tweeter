@@ -1,7 +1,6 @@
 $(document).ready(function() {
   const MAX_CHARACTERS = 140;
 
-
   $('.new-tweet textarea[name="text"]').on('input', function() {
     const textLength = $(this).val().length;
     const counter = $(this).siblings('.counter');
@@ -24,12 +23,12 @@ $(document).ready(function() {
     const tweetContent = tweetTextarea.val().trim(); // Trim whitespace
 
     if (tweetContent === '') {
-      alert('Error: Your tweet cannot be empty.');
+      showError('Error: Your tweet cannot be empty.');
       return; // Return early if validation fails
     }
 
     if (tweetContent.length > MAX_CHARACTERS) {
-      alert('Error: Your tweet exceeds the maximum character limit.');
+      showError('Error: Your tweet exceeds the maximum character limit.');
       return; // Return early if validation fails
     }
 
@@ -39,10 +38,7 @@ $(document).ready(function() {
     tweetTextarea.val(''); // Clear textarea
   });
 
-
-
   function addNewTweet(tweetText) {
-
     if (!tweetText.trim()) {
       showError('Error: Your tweet cannot be empty.');
       return;
@@ -78,7 +74,4 @@ $(document).ready(function() {
     const errorMessageElement = $('.error-message');
     errorMessageElement.slideUp();
   }
-}
-
-
 });
