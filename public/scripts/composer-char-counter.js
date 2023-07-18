@@ -16,6 +16,9 @@ $(document).ready(function() {
     }
   });
 
+
+
+  // validation function
   $('.new-tweet form').on('submit', function(event) {
     event.preventDefault(); // Prevent the form from submitting
 
@@ -24,13 +27,17 @@ $(document).ready(function() {
 
     if (tweetContent === '') {
       alert('Error: Your tweet cannot be empty.');
-    } else if (tweetContent.length > MAX_CHARACTERS) {
-      alert('Error: Your tweet exceeds the maximum character limit.');
-    } else {
-      // If validation passes, you can proceed with sending the form data to the server.
-      // log success message and clear the textarea.
-      console.log('Tweet sent successfully:', tweetContent);
-      tweetTextarea.val(''); // Clear textarea
+      return; // Return early if validation fails
     }
+
+    if (tweetContent.length > MAX_CHARACTERS) {
+      alert('Error: Your tweet exceeds the maximum character limit.');
+      return; // Return early if validation fails
+    }
+
+    // If validation passes, you can proceed with sending the form data to the server.
+    // log success message and clear the textarea.
+    console.log('Tweet sent successfully:', tweetContent);
+    tweetTextarea.val(''); // Clear textarea
   });
 });
