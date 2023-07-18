@@ -28,9 +28,9 @@ $(document).ready(function() {
       alert('Error: Your tweet exceeds the maximum character limit.');
     } else {
       // If validation passes, you can proceed with sending the form data to the server.
-      // For now, we'll just log a success message and clear the textarea.
+      // log success message and clear the textarea.
       console.log('Tweet sent successfully:', tweetContent);
-      tweetTextarea.val(''); // Clear the textarea
+      tweetTextarea.val(''); // Clear textarea
     }
   });
 });
