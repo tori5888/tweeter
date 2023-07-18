@@ -1,9 +1,11 @@
 $(document).ready(function() {
+  const MAX_CHARACTERS = 140;
+
+
   $('.new-tweet textarea[name="text"]').on('input', function() {
     const textLength = $(this).val().length;
     const counter = $(this).siblings('.counter');
-    const remainingChars = 140 - textLength;
-
+    const remainingChars = MAX_CHARACTERS - textLength;
     counter.text(remainingChars);
 
     if (remainingChars < 0) {
