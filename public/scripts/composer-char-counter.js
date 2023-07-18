@@ -39,5 +39,6 @@ $(document).ready(function() {
     // log success message and clear the textarea.
     console.log('Tweet sent successfully:', tweetContent);
     tweetTextarea.val(''); // Clear textarea
+
   });
 });
