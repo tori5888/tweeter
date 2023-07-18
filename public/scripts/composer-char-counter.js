@@ -16,7 +16,11 @@ $(document).ready(function() {
     }
   });
 
-
+  function escapeHTML(text) {
+    const div = document.createElement('div');
+    div.appendChild(document.createTextNode(text));
+    return div.innerHTML;
+  }
 
   // validation function
   $('.new-tweet form').on('submit', function(event) {
@@ -41,6 +45,8 @@ $(document).ready(function() {
     tweetTextarea.val(''); // Clear textarea
   });
 
+
+  
   function addNewTweet(tweetText) {
     // Create a new tweet element with the desired structure
     const newTweet = $('<article class="tweet">')
@@ -51,7 +57,7 @@ $(document).ready(function() {
           .append('<span class="user-handle">@yourhandle</span>')
         )
       )
-      .append($('<div class="tweet-content">').text($('<p>').text(tweetText)))
+      .append($('<div class="tweet-content">').html($('<p>').text(tweetText)))
       .append($('<footer>')
         .append($('<span class="tweet-timestamp">').text('a few seconds ago'))
         .append($('<div class="tweet-actions">').append('<i class="far fa-flag"></i><i class="fas fa-retweet"></i><i class="far fa-heart"></i>'))
