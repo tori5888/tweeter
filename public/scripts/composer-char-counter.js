@@ -42,10 +42,7 @@ $(document).ready(function() {
   });
 
   function addNewTweet(tweetText) {
-    // Create a new tweet element
     const newTweet = $('<div class="tweet">').text(tweetText);
-
-    // Add the new tweet to the top of the tweets list
-    $('.tweets').prepend(newTweet);
+    $('.tweets-container').prepend(newTweet);
   }
 });
