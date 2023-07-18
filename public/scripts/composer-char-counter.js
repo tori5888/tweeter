@@ -16,12 +16,6 @@ $(document).ready(function() {
     }
   });
 
-  function escapeHTML(text) {
-    const div = document.createElement('div');
-    div.appendChild(document.createTextNode(text));
-    return div.innerHTML;
-  }
-
   // validation function
   $('.new-tweet form').on('submit', function(event) {
     event.preventDefault(); // Prevent the form from submitting
@@ -46,12 +40,17 @@ $(document).ready(function() {
   });
 
 
-  
+
   function addNewTweet(tweetText) {
+
+    if (!tweetText.trim()) {
+      showError('Error: Your tweet cannot be empty.');
+      return;
+    }
     // Create a new tweet element with the desired structure
     const newTweet = $('<article class="tweet">')
       .append($('<header>')
-      .append($('<div class="avatar">').append('<img src="https://i.imgur.com/73hZDYK.png" class="avatar">'))
+        .append($('<div class="avatar">').append('<img src="https://i.imgur.com/73hZDYK.png" class="avatar">'))
         .append($('<div class="user-info">')
           .append('<h3 class="user-name">Your Name</h3>')
           .append('<span class="user-handle">@yourhandle</span>')
@@ -64,5 +63,22 @@ $(document).ready(function() {
       );
 
     $('.tweets-container').prepend(newTweet);
+
+    // If validation passes, hide the error message element (if visible)
+    hideError();
   }
+
+  function showError(message) {
+    const errorMessageElement = $('.error-message');
+    errorMessageElement.text(message);
+    errorMessageElement.slideDown();
+  }
+
+  function hideError() {
+    const errorMessageElement = $('.error-message');
+    errorMessageElement.slideUp();
+  }
+}
+
+
 });
