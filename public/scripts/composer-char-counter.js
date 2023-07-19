@@ -1,9 +1,9 @@
 $(document).ready(function() {
   const MAX_CHARACTERS = 140;
+  const counter = $('.new-tweet .counter'); // Move the counter selection outside the event handler
 
   $('.new-tweet textarea[name="text"]').on('input', function() {
     const textLength = $(this).val().length;
-    const counter = $(this).siblings('.counter');
     const remainingChars = MAX_CHARACTERS - textLength;
 
     counter.text(remainingChars);
@@ -14,6 +14,9 @@ $(document).ready(function() {
       counter.removeClass('redText');
     }
   });
+
+ // Trigger the input event on page load to calculate initial character count
+ $('.new-tweet textarea[name="text"]').trigger('input');
 
   // validation function
   $('.new-tweet form').on('submit', function(event) {
@@ -36,6 +39,9 @@ $(document).ready(function() {
     // and clear the textarea.
     addNewTweet(tweetContent);
     tweetTextarea.val(''); // Clear textarea
+
+     // Reset the character counter
+     counter.text(MAX_CHARACTERS).removeClass('redText');
   });
 
   function addNewTweet(tweetText) {
