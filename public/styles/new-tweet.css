@@ -159,3 +159,7 @@
   border-radius: 4px;
   margin-top: 10px;
 }
+
+.new-tweet .counter.redText {
+  color: red;
+}
