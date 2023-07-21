@@ -8,7 +8,6 @@
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-
   <!-- External CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     type="text/css" />
@@ -25,6 +24,8 @@
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -35,16 +36,12 @@
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
 
-  <!-- New-Tweet CSS -->
-  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-
-
 </head>
 
 <body>
-  <!-- Top nav bar (fixed) -->
+  <!-- Top nav bar -->
   <nav>
-    <span style="font-family: 'Bungee', cursive;">tweeter</span>
+    <span>tweeter</span>
     <div class="write-tweet">
       <span>Write a new tweet</span>
       <i class="fas fa-angle-double-down"></i>
@@ -53,10 +50,12 @@
 
   <header class="header-container">
     <div class="avatar">
-      <img src="https://preview.redd.it/gimmick-discussion-nr-1-john-cena-which-one-is-better-v0-7y7ftwzi92q91.png?width=525&format=png&auto=webp&s=9d933d38ada13a2c5086e38623010a4c9db610d9">    </div>
+      <img src="https://preview.redd.it/gimmick-discussion-nr-1-john-cena-which-one-is-better-v0-7y7ftwzi92q91.png?width=525&format=png&auto=webp&s=9d933d38ada13a2c5086e38623010a4c9db610d9" width="150" height="150"
+        alt="Your Avatar">
+    </div>
     <br>
     <div class="name">
-      <h2 style="font-family: 'Source Sans 3', sans-serif;">John Cena</h2>
+      <h2>John Cena</h2>
     </div>
   </header>
 
@@ -73,14 +72,11 @@
         </div>
       </form>
 
-      <!-- Add the error message element here -->
       <div class="error-message" style="display: none;"></div>
     </section>
 
-
-
     <section class="tweets-container">
-      <!-- This is the new section for the tweets -->
+      <!-- Section for the tweets -->
     </section>
 
   </main>
