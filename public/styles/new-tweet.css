@@ -165,4 +165,12 @@
 }
 
 
+@media (min-width: 1024px) {
+  .tweets-container {
+    position: absolute;
+    top: 520px; /* Adjust the top position as needed */
+    right: 2.5%; /* Adjust the right position as needed */
+    width: 45%; /* Adjust the width as needed */
+  }
 
+}
