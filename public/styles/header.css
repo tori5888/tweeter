@@ -35,9 +35,6 @@
   font-size: 24px;
 }
 
-
-
-
     /* New CSS for larger screens or monitors (1024px and above) */
 @media (min-width: 1024px) {
   .header-container {
