@@ -16,3 +16,8 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+## Final Product
+
+!["Large Moniter View"](https://github.com/tori5888/tweeter/blob/master/Screenshots/large-moniter-view.png?raw=true)
+!["Condensed Screen View"](https://github.com/tori5888/tinyapp/blob/master/docs/login-page.png?raw=true)
