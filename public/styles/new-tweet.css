@@ -164,12 +164,20 @@
 }
 
 
+/* New CSS for larger screens or monitors (1024px and above) */
 @media (min-width: 1024px) {
+  .new-tweet {
+    position: absolute;
+    top: 120px;
+    right: 2.5%;
+    width: 48%;
+  }
+
   .tweets-container {
     position: absolute;
     top: 520px;
     right: 2.5%;
-    width: 50%; 
+    width: 50%;
   }
 
 }

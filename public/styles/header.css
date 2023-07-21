@@ -35,14 +35,7 @@
   font-size: 24px;
 }
 
-/* New CSS for larger screens or monitors (1024px and above) */
-  @media (min-width: 1024px) {
-    .new-tweet {
-      position: absolute;
-      top: 120px;
-      right: 2.5%;
-      width: 48%;
-    }
+
 
 
     /* New CSS for larger screens or monitors (1024px and above) */
@@ -53,6 +46,4 @@
     left: 2.5%;
     width: 30%;
   }
-}
-
 }
