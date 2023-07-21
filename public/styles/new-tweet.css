@@ -44,7 +44,7 @@
   font-size: 1em;
   padding: 0.5em 1em;
   margin-top: 1em;
-  margin-left: auto; /* Added to move the button to the right */
+  margin-left: auto;
   cursor: pointer;
 }
 
